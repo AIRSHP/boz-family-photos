@@ -2,7 +2,7 @@
 
 A small Mac app that backs up the photos you choose to the Boz family archive.
 
-**It only sends what you put in one Photos album, called Family Archive.** Nothing else in your Photos library is touched.
+It only sends what you put in **one Photos album, called Boz Family Archive Sync.** Nothing else in your Photos library is touched.
 
 [**Download the latest version**](https://github.com/AIRSHP/boz-family-photos/releases/latest/download/Boz-Family-Photos.zip) · Needs macOS 13 (Ventura) or newer, on any Mac.
 
@@ -18,10 +18,10 @@ You need the two-part key Dustin gives you (a **key ID** and an **application ke
 4. **Allow it once:** open **System Settings → Privacy & Security**, scroll down to the line about Boz Family Photos, and click **Open Anyway**. Enter your Mac password, then click **Open**.
 5. **Set Up** opens by itself:
    - **This Mac belongs to:** pick your name.
-   - **Photos album:** leave it as **Family Archive**.
+   - **Photos album:** leave it as **Boz Family Archive Sync**.
    - **B2 key ID** and **B2 application key:** paste the two parts from Dustin.
    - Click **Check and Save**. You should see **Ready**.
-6. **Make the album:** open **Photos**, choose **File → New Album**, and name it exactly **Family Archive**.
+6. **Make the album:** open **Photos**, choose **File → New Album**, and name it exactly **Boz Family Archive Sync**.
 7. Click the **photo icon** in the menu bar at the top of the screen and choose **Sync Now**. When your Mac asks about Photos, choose **Allow Full Access**.
 8. In the same menu, turn on **Open at Login** so it keeps running after a restart.
 
@@ -31,10 +31,10 @@ That's it. You only do this once. Updates install themselves.
 
 ## Everyday use
 
-**To back up a photo or video, add it to the Family Archive album.** That's the only step.
+**To back up a photo or video, add it to the Boz Family Archive Sync album.** That's the only step.
 
-- In Photos, select photos, then right-click → **Add to → Family Archive**.
-- On your iPhone this works too, if iCloud Photos is on and your Mac uses the same Apple Account. Add the photo to Family Archive on the phone, and your Mac picks it up.
+- In Photos, select photos, then right-click → **Add to → Boz Family Archive Sync**.
+- On your iPhone this works too, if iCloud Photos is on and your Mac uses the same Apple Account. Add the photo to Boz Family Archive Sync on the phone, and your Mac picks it up.
 - The app checks the album every 3 hours, when your Mac wakes up, and whenever you choose **Sync Now**. Your Mac has to be on and the app running (look for the photo icon in the menu bar).
 - The first sync of a big album can take a while. It's fine to keep using your Mac.
 
@@ -74,8 +74,8 @@ To check right away, choose **Check for Updates**.
 
 | Message | What to do |
 |---|---|
-| **No album named "Family Archive"** | In Photos, make (or rename) an album to exactly **Family Archive**. |
-| **2 albums are named "Family Archive"** | Rename the extra one. |
+| **No album named "Boz Family Archive Sync"** | In Photos, make (or rename) an album to exactly **Boz Family Archive Sync**. |
+| **2 albums are named "Boz Family Archive Sync"** | Rename the extra one. |
 | **Photos access is limited / not granted** | **System Settings → Privacy & Security → Photos → Boz Family Photos → Full Access**. |
 | **This B2 key can't be used** | The key is wrong or for someone else. Ask Dustin, then use **Set Up…** again. |
 | **Open at Login could not be changed** | Move the app into **Applications**, open it from there, and try again. |
@@ -88,6 +88,9 @@ Still stuck? Choose **Show Log** and send Dustin a screenshot of the last few li
 ---
 
 ## What's new
+
+### 0.2.1 (2026-11-10)
+- The album is now called **Boz Family Archive Sync**, a name you won't use by accident. If you set up with the old name, Family Archive, just rename that album in Photos to Boz Family Archive Sync. The app switches over by itself, and nothing gets uploaded twice.
 
 ### 0.2.0 (2026-11-10)
 - Updates now install themselves, and the app checks each one is signed by the family before installing it.
