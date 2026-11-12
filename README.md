@@ -60,6 +60,27 @@ The menu also has **Preview (no upload)**, which shows what would be sent withou
 
 ---
 
+## Names from your Photos (optional, once in a while)
+
+Photos already knows who is in many of your pictures. You can share those names with the family archive, so a search for a person finds the old photos that are also in your library. Only names, capture times and a small fingerprint of each picture are shared, never the photos themselves, and only to your own family folder.
+
+**One-time setup** (about 5 minutes), in the **Terminal** app (Applications → Utilities → Terminal). Terminal needs Full Disk Access to read your Photos library: System Settings → Privacy & Security → Full Disk Access → turn on Terminal. Use the Terminal app itself; terminals inside other apps are refused.
+
+1. Install the tools. Paste this, press Return, and wait for it to finish:
+   `curl -LsSf https://astral.sh/uv/install.sh | sh`
+2. Close Terminal, open it again, then paste:
+   `uv tool install osxphotos --with ImageHash==4.3.2`
+3. Download the names script:
+   `curl -fsSL https://raw.githubusercontent.com/AIRSHP/boz-family-photos/main/people_export.py -o ~/people_export.py`
+
+**Each time you want to share names** (after naming more people in Photos, for example), paste this, with your own first name in place of `evan`:
+
+`osxphotos run ~/people_export.py --person evan --out ~/Library/Application\ Support/Boz\ Family\ Photos/people-export.json`
+
+It takes a minute or two and prints how many named photos it found. It only reads your library and changes nothing in Photos. The app uploads the file at its next sync. Choose **Sync Now** to send it right away.
+
+**If it goes wrong:** "Operation not permitted" means Terminal doesn't have Full Disk Access yet (see above), or you're in a terminal inside another app. "command not found: osxphotos" means step 2 didn't finish; close and reopen Terminal and run it again.
+
 ## Updates
 
 Updates install themselves. The app checks a couple of minutes after it starts, and then every 6 hours. It waits until a sync finishes, then restarts on the new version. You don't need to do anything, and your settings, key and Photos access carry over.
@@ -88,6 +109,9 @@ Still stuck? Choose **Show Log** and send Dustin a screenshot of the last few li
 ---
 
 ## What's new
+
+### 0.2.2 (2026-11-11)
+- The app now also uploads the names file from **Names from your Photos**, if you made one, to your own family folder. Nothing changes if you don't use it.
 
 ### 0.2.1 (2026-11-10)
 - The album is now called **Boz Family Archive Sync**, a name you won't use by accident. If you set up with the old name, Family Archive, just rename that album in Photos to Boz Family Archive Sync. The app switches over by itself, and nothing gets uploaded twice.
